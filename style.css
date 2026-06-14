@@ -1,0 +1,44 @@
+:root{
+    --bg:#f6f8fa;
+    --card:#ffffff;
+    --accent:#2d8f5a;
+    --accent-dark:#216e45;
+    --muted:#6b7280;
+    --alert:#f59e0b;
+    --danger:#ef4444;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#111}
+
+header{background:linear-gradient(90deg,var(--accent) 0%, var(--accent-dark) 100%);color:#fff;padding:1.25rem 0}
+.header-container{max-width:960px;margin:0 auto;padding:0 1rem}
+.header-container h1{margin:0;font-size:1.375rem}
+.header-container p{margin:0.25rem 0 0;font-size:0.9rem;opacity:0.95}
+
+.container{max-width:960px;margin:2rem auto;padding:0 1rem}
+.banner-projeto{margin-bottom:1rem}
+
+.simulador-box{background:var(--card);border-radius:12px;padding:1.25rem;box-shadow:0 6px 20px rgba(17,24,39,0.06)}
+.form-group{margin-bottom:0.75rem}
+.form-group label{display:block;font-weight:600;margin-bottom:0.35rem}
+.form-group input,.form-group select{width:100%;padding:0.6rem;border:1px solid #e6e9ee;border-radius:8px;font-size:0.95rem}
+
+button#btn-calcular{display:inline-block;background:var(--accent);color:#fff;border:0;padding:0.75rem 1rem;border-radius:10px;font-weight:700;cursor:pointer;margin-top:0.5rem}
+button#btn-calcular:hover{background:var(--accent-dark)}
+
+.resultado-oculto{display:none}
+.resultado-visivel{display:block;margin-top:1rem}
+
+.grid-resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-top:0.5rem}
+.card-metrica{background:#fafafa;border:1px solid #f0f2f5;padding:0.75rem;border-radius:8px;display:flex;flex-direction:column}
+.card-metrica span{font-size:0.9rem;color:var(--muted)}
+.card-metrica strong{margin-top:0.3rem;font-size:1.05rem}
+
+.mensagem-impacto{margin-top:0.85rem;padding:0.9rem;border-radius:8px;background:#fff;border:1px solid transparent}
+.mensagem-impacto.sucesso{background:linear-gradient(180deg, rgba(34,197,94,0.06), rgba(34,197,94,0.02));border-color:rgba(34,197,94,0.18)}
+.mensagem-impacto.alerta{background:linear-gradient(180deg, rgba(245,158,11,0.06), rgba(245,158,11,0.02));border-color:rgba(245,158,11,0.18)}
+
+footer{text-align:center;padding:1.25rem 0;color:var(--muted);font-size:0.9rem;margin-top:2rem}
+
+@media (max-width:520px){.header-container h1{font-size:1.1rem}.header-container p{font-size:0.85rem}}

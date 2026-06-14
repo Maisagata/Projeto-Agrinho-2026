@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pecuária Sustentável - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Concurso Agrinho 2026 • Simulador de Gestão e Venda de Bovinos</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="banner-projeto">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" alt="Campo de Agropecuária Sustentável" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5rem;">
+        </div>
+
+        <section class="intro">
+            <h2>Equilíbrio entre Produção e o Meio Ambiente</h2>
+            <p>Descubra como as decisões de manejo na sua propriedade afetam diretamente o seu bolso e a saúde do planeta. Insira os dados do seu rebanho abaixo:</p>
+        </section>
+
+        <section class="simulador-box">
+            <div class="form-group">
+                <label for="quantidade">Tamanho do Rebanho (nº de cabeças):</label>
+                <input type="number" id="quantidade" min="1" value="100" placeholder="Ex: 150">
+            </div>
+
+            <div class="form-group">
+                <label for="manejo">Sistema de Manejo Adotado:</label>
+                <select id="manejo">
+                    <option value="tradicional">Manejo Tradicional (Pastagem Contínua/Degradada)</option>
+                    <option value="sustentavel">Manejo Sustentável (Rotação de Piquetes + ILPF)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="precoArroba">Preço Base da Arroba no Mercado (R$):</label>
+                <input type="number" id="precoArroba" min="1" value="280" placeholder="Ex: 280">
+            </div>
+
+            <button type="button" id="btn-calcular">Simular Venda e Impacto</button>
+
+            <div id="painel-resultado" class="resultado-oculto">
+                <h3>📊 Relatório de Desempenho</h3>
+                
+                <div class="grid-resultados">
+                    <div class="card-metrica">
+                        <span>Peso Médio por Animal:</span>
+                        <strong id="res-peso">0 @</strong>
+                    </div>
+                    <div class="card-metrica">
+                        <span>Faturamento Bruto Total:</span>
+                        <strong id="res-faturamento">R$ 0,00</strong>
+                    </div>
+                </div>
+
+                <div id="card-impacto" class="mensagem-impacto">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 2026 — Categoria: Ensino Médio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
